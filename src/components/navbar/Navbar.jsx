@@ -117,7 +117,9 @@ export default function Navbar() {
     const [location, setLocation] = useState({
         city: '',
         state: '',
-        country: ''
+        country: '',
+        latt:'',
+        longg:''
     });
     const [loading, setloading] = useState(false);
     const handleClick = () => {
@@ -131,7 +133,9 @@ export default function Navbar() {
                         setLocation({
                             city: data.address.city ?? '',
                             state: data.address.state ?? '',
-                            country: data.address.country ?? ''
+                            country: data.address.country ?? '',
+                            latt:latitude,
+                            longg:longitude
                         });
                     },
                         setloading(false));
@@ -149,18 +153,18 @@ export default function Navbar() {
                     .then(response => response.json())
                     .then(data => {
                         setLocation({
-                            street: data.address.road ?? data.address.pedestrian ?? data.address.path ?? 'none',
-                            city: data.address.city ?? '',
+                            city: data.address.road ?? data.address.residential ?? '',
                             state: data.address.state ?? '',
                             country: data.address.country ?? ''
                         },
-                        setloading(false));
-                        console.log(data);
-                    
+                        setloading(false))
+                    console.log(data.address.road)
                     });
             });
         }
-    }, []);
+    }, []);   
+    
+    
     return (
 
         <>
@@ -177,7 +181,7 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse order-4 " id="navbarNav">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
-                                <Link to='/about' className="nav-link active" aria-current="page" role='button' href="#"><EnvironmentOutlined /> Near By Shops</Link>
+                                <Link to='/about' className="nav-link active" aria-current="page" role='button' href="#"><EnvironmentOutlined /> {location.latt} , {location.longg}</Link>
                             </li>
                             <li className="nav-item d-none d-md-grid">
                                 <Search />
