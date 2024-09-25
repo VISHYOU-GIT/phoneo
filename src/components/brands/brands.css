@@ -1,0 +1,13 @@
+.brand-img{
+    object-fit: contain;
+    height: 100px !important;
+    width: 10rem !important;
+    transition: all 0.5s;   
+}
+.brand-img:hover{
+    background: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    filter: invert(1);
+    transition: all 0.5s;
+}

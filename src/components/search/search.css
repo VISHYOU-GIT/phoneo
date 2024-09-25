@@ -1,0 +1,16 @@
+ .search{
+     display: grid;
+     place-items: center;
+ }
+ .autoComplete{
+     width: 25dvw;
+ }
+ @media only screen and (max-width: 600px) {
+    .autoComplete{
+        width: 92dvw;
+    }
+         .search {
+             display: initial;
+             place-items: initial;
+         }
+  }

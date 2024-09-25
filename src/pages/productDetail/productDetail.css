@@ -1,0 +1,15 @@
+.notfound{
+    place-items: center;
+}
+
+.product-main-image{
+     width:100% !important;
+     min-width: 300px;
+     object-fit: contain;
+}
+
+.product-image{
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: contain;
+}

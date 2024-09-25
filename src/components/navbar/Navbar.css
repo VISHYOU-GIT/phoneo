@@ -1,0 +1,38 @@
+.bg-navbar {
+    background-color: rgba(255, 255, 255, 0.875);
+    backdrop-filter: blur(5px);
+}
+
+.nav-item {
+    margin-inline: 1rem;
+    display: grid;
+    place-items: center;
+}
+.nav-item:is(:hover) {
+background-color: whitesmoke;
+border-radius: 8px;
+cursor: pointer;
+}
+
+
+.icons {
+    font-size: 14px;
+    translate: 0px -1px;
+}
+
+.logo {
+
+
+    filter: brightness(0%);
+    height: fit-content;
+    width: 80px;
+    translate: 0px -6px;
+
+}
+@media only screen and (max-width: 600px) {
+.nav-item {
+         margin-block: 0.1rem;
+        display: inherit;
+        place-items: start;
+    }
+}

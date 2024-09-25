@@ -1,0 +1,24 @@
+.card-img-top{
+    height: 200px !important;
+    object-fit:scale-down;
+     
+}
+.card{
+    transition: all 0.5s;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+}
+.card:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.card:hover .card-img-top{
+    
+    transition: all 0.5s;
+}
+.card:hover ~ .card .card-img-top{
+    mix-blend-mode: luminosity !important;
+    transition: all 0.5s;
+}
