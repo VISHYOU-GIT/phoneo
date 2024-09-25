@@ -185,7 +185,7 @@ export default function Navbar() {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" role='button'>
                                     <Button loading={loading} icon={<AimOutlined />} onClick={handleClick} size="large">
-                                         {loading ? 'Loading Location...' : location.city ? `${location.street}` : 'Get Location'}
+                                         {loading ? 'Loading Location...' : location.city ? `${location.city}` : 'Get Location'}
                                     </Button>
 
                                 </a>
